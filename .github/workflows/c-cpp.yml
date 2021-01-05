@@ -17,3 +17,11 @@ jobs:
       run: make
     - name: make package
       run: make package
+    - name: Release
+      uses: softprops/action-gh-release@v1
+      with:
+        tag_name: ${{ github.ref }}
+        release_name: Release ${{ github.ref }}
+        draft: true
+        files: |
+          helloworld.tar.gz
