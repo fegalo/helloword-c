@@ -1,12 +1,11 @@
 all : build
 
 build:
-	mkdir bin
-	gcc helloworld.c -o bin/helloworld
+	gcc helloworld.c -o helloworld
 	
 package:build
-	tar -czvf helloworld.tar.gz bin
+	tar -czvf helloworld.tar.gz helloworld
 	
 clean:
-	rm -rf bin
+	rm -rf helloworld
 	rm -rf *.tar.gz
